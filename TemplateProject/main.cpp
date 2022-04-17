@@ -3,6 +3,7 @@
 #include <compare>
 #include <map>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -19,6 +20,19 @@ int main(int argc, char **argv)
 
     cout << "A six-pack plus a twelve-pack is an " << sum(cansPerPack, cansPerCase) << "-pack." << endl;
     cout << "The sum of 492 and 314 is " << sum(492, 314) << endl;
+
+    sum(cansPerPack, cansPerCase);
+
+    int userCans;
+    string beerName;
+
+    cout << "Which beer would you like?" << endl;
+    getline(cin, beerName);
+
+    cout << "How many cans of beer would you like?" << endl;
+    cin >> userCans;
+
+    cout << "You ordered " << userCans << " cans of " << beerName << "." << endl;
 
     return 0;
 }
